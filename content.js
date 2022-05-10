@@ -66,7 +66,7 @@ const observer = new MutationObserver(function () {
       const addButton = document.createElement('input');
       addButton.classList.add('auto-read--button');
       addButton.type = 'button';
-      addButton.value = '全てを「読んだ」に追加';
+      addButton.value = '全てを「読んだ本」に追加';
       addButton.addEventListener("click", markAllBooks);
       title.appendChild(addButton);
     }
