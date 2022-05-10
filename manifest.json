@@ -1,0 +1,20 @@
+{
+  "name": "Bookmeter Bookmark Util",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "読書メーター用の拡張機能です。検索結果やシリーズ一覧で表示されている本を、「読んだ日不明」でまとめて「読んだ本」に追加します。",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://bookmeter.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "style.css"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

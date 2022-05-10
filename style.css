@@ -1,0 +1,60 @@
+.auto-read--button {
+  margin-left: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  display: inline-block;
+  width: 200px;
+  height: 42px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 42px;
+  outline: none;
+}
+.auto-read--button::before,
+.auto-read--button::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.auto-read--button,
+.auto-read--button::before,
+.auto-read--button::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.auto-read--button {
+  position: relative;
+  z-index: 2;
+  background-color: #64bc4b;
+  border: 2px solid #64bc4b;
+  color: #fff;
+  line-height: 42px;
+}
+.auto-read--button:hover {
+  background-color: #fff;
+  border-color: #ee921a;
+  color: #ee921a;
+}
+.auto-read--button::before,
+.auto-read--button::after {
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #64bc4b;
+}
+.auto-read--button::before {
+  right: 0;
+}
+.auto-read--button::after {
+  left: 0;
+}
+.auto-read--button:hover::before,
+.auto-read--button:hover::after {
+  width: 0;
+  background-color: #ee921a;
+}
