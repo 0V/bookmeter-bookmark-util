@@ -117,7 +117,6 @@ const observer = new MutationObserver(async function () {
 });
 
 observer.observe(document.querySelector('.bm-wrapper'), { attributes: true, childList: true, subtree: true })
-
 observer.observe(document.querySelector('head'), { attributes: true, childList: true, subtree: true })
-
+observer.observe(document.querySelector('.layouts'), { attributes: true, childList: true, subtree: true })
 
