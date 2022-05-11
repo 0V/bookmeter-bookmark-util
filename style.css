@@ -9,6 +9,7 @@
   text-decoration: none;
   line-height: 42px;
   outline: none;
+  cursor: pointer;
 }
 .auto-read--button::before,
 .auto-read--button::after {
