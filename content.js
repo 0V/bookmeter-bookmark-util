@@ -92,6 +92,28 @@ const observer = new MutationObserver(async function () {
       book.appendChild(addOneButton);
     }
   }
+
+  await sleep(1000);
+
+  if (!document.querySelector('.auto-read--one-button')) {
+
+    // Create One Read Button
+    var books = document.getElementsByClassName('group__book');
+    const bookLength = books.length;
+
+    for (let i = bookLength - 1; i >= 0; i--) {
+      const book = books[i];
+
+      const addOneButton = document.createElement('div');
+      const addOneButtonSpan = document.createElement('span');
+      addOneButtonSpan.innerHTML = '1click登録';
+      addOneButton.classList.add('auto-read--one-button');
+      addOneButton.appendChild(addOneButtonSpan)
+      addOneButton.addEventListener("click", addReadBook(book));
+      book.appendChild(addOneButton);
+    }
+  }
+
 });
 
 observer.observe(document.querySelector('.bm-wrapper'), { attributes: true, childList: true, subtree: true })
