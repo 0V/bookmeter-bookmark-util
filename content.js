@@ -93,7 +93,7 @@ const observer = new MutationObserver(async function () {
     }
   }
 
-  await sleep(1000);
+  await sleep(2000);
 
   if (!document.querySelector('.auto-read--one-button')) {
 
